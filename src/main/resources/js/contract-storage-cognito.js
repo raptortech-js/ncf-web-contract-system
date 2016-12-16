@@ -4,6 +4,8 @@
 const base64 = require('base64-js');
 const resolveConflict = require('./resolve-conflict.js');
 
+/** A CognitoStorage is basically a simple interface to Cognito Sync that's
+    specialized to storing ContractEntries. */
 function CognitoStorage(logins, allowAnonymous, onUpdateCallback) {
   this._debug_logins = logins;
   this.onUpdateCallback = onUpdateCallback || (() => {});
